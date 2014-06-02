@@ -59,7 +59,7 @@ $$\frac{\alpha \beta}{(\alpha + \beta)^2 (\alpha + \beta + 1)}$$
 
 ---
 
-```
+```{r}
 ## Exploring the beta density
 library(manipulate)
 pvals <- seq(0.01, 0.99, length = 1000)
@@ -137,7 +137,7 @@ $$
   puts $\alpha = \beta = .5$
 
 ---
-```
+```{r}
 pvals <- seq(0.01, 0.99, length = 1000)
 x <- 13; n <- 20
 myPlot <- function(alpha, beta){
@@ -172,6 +172,7 @@ manipulate(
 ## Getting HPD intervals for this example
 - Install the \texttt{binom} package, then the command
 ```{r}
+install.packages("binom")
 library(binom)
 binom.bayes(13, 20, type = "highest")
 ```
@@ -180,7 +181,7 @@ gives the HPD interval.
 the default prior is the Jeffrey's prior.
 
 ---
-```
+```{r}
 pvals <- seq(0.01, 0.99, length = 1000)
 x <- 13; n <- 20
 myPlot2 <- function(alpha, beta, cl){
